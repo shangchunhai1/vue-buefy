@@ -1,0 +1,118 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+// Set your colors
+$primary: #ff6633;
+$primary-invert: findColorInvert($primary);
+$info: #209cee;
+$info-invert: findColorInvert($info);
+$link: #3273dc;
+$link-invert: findColorInvert($link);
+$success: #23d160;
+$success-invert: findColorInvert($success);
+$warning: #ffdd57;
+$warning-invert: findColorInvert($warning);
+$danger: #ff3860;
+$danger-invert: findColorInvert($danger);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: ( "white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert), "info": ($info, $info-invert), "success": ($success, $success-invert), "warning": ($warning, $warning-invert), "danger": ($danger, $danger-invert), "twitter": ($twitter, $twitter-invert));
+// Links
+$link-focus-border: $primary;
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+.button {
+  display: block;
+  width: 100%;
+}
+
+.height-full {
+  height: 100%;
+}
+
+.card-padding {
+  padding: 0.6rem 1rem;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+  padding-bottom: 130px;
+}
+
+.card-list {
+  padding: 0.6rem 1rem;
+  background: #fff;
+  &-full {
+    background: #fff;
+  }
+  &-padd {
+    padding-top: 0.6rem;
+  }
+  &-content {
+    padding: 0.6rem 1rem;
+    background: #fff;
+  }
+  &-title {
+    padding: 3px;
+    font-size: 0.8rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  &-subtitle {
+    padding: 3px;
+    font-size: 0.6rem;
+    color: #999;
+  }
+  &-sale {
+    padding: 3px;
+    font-size: 0.6rem;
+    line-height: 1;
+    color: #999;
+  }
+  &-price {
+    padding: 5px 3px;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    color: rgba(248, 17, 17, 0.959);
+  }
+  &-theme {
+    padding: 0px;
+    font-size: 1rem;
+    border-left: 4px solid $primary;
+    color: #000;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+  &-bottom-border{
+    border-bottom:1px solid #eee;
+  }
+  &-title-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+.padding-10{
+  padding:10px 0px;
+}
+.title-show-2-hidden {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.title-show-1-hidden {
+  @extend .title-show-2-hidden;
+  -webkit-line-clamp: 1;
+  
+}
+.title-show-3-hidden {
+  @extend .title-show-2-hidden;
+  -webkit-line-clamp: 3;
+}
+.padding-left-less{
+  padding-left:0 !important;
+}
